@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service
+				data-source-ref="dataSource" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+	
+	<security:http use-expressions="true">
+		<security:intercept-url pattern="/createreview"
+			access="isAuthenticated()" />
+		<security:intercept-url pattern="/increate"
+			access="isAuthenticated()" />
+		<security:intercept-url pattern="/reviewadded"
+			access="isAuthenticated()" />
+		<security:intercept-url pattern="/" access="permitAll" />
+		<security:intercept-url pattern="/static/**"
+			access="permitAll" />
+			<security:intercept-url pattern="/j_spring_security_logout"
+			access="permitAll" />
+		<security:intercept-url pattern="/loggedout"
+			access="permitAll" />
+		<security:intercept-url pattern="/login"
+			access="permitAll" />
+			<security:intercept-url pattern="/review"
+			access="permitAll" />
+		<security:intercept-url pattern="/createaccount"
+			access="permitAll" />
+		<security:intercept-url pattern="/inaccount"
+			access="permitAll" />
+		<security:intercept-url pattern="/accountcreated"
+			access="permitAll" />
+		<security:intercept-url pattern="/reviews"
+			access="permitAll" />
+
+
+		<security:intercept-url pattern="/**" access="denyAll" />
+		<security:form-login login-page="/login"
+			authentication-failure-url="/login?err=true"
+			authentication-success-forward-url="/" />
+
+		<security:logout logout-success-url="/logout"
+			invalidate-session="true" logout-url="/j_spring_security_logout" />
+	</security:http>
+</beans>

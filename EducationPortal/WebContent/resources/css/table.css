@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+caption{
+	font-size:30px;
+	color: darkviolet;
+	font-weight: bold;
+}
+.formtable{
+	position: relative;
+	left: 35%;
+	padding: 10px;
+	margin-top: 40px;
+	border: 2px solid blue;
+	background-color: antiquewhite;
+}
+
+form{
+	
+	
+}
+#review-table{
+	position:relative;
+	left:20%;
+	border: 2px solid blue;
+	align-text:center;
+}
+#review-table th{
+	font-weight:bold;
+	border: 2px solid blue;
+}
+#review-table td {
+	font-size: 24px;
+	padding:10px;
+	border: 2px solid blue;
+}
+td {
+	font-size: 24px;
+	padding:10px;
+}
+
+#sbutton{
+	display: block;
+	padding-left: 70%;
+	font-size: 35px;
+}
+#centered{
+	text-align:center;
+}
+.error{
+	color : red;
+	font-size : 18px;
+
+}
+
+.foot{
+	clear:both;
+	margin-top: 40px;
+	
+}

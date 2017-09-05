@@ -1,0 +1,15 @@
+@CHARSET "ISO-8859-1";
+
+.error{
+	color : red;
+	font-size : small;
+}
+
+.formtable{
+	
+	border : 1px solid blue;
+	padding : 10px;
+}
+p.error{
+	color : red;
+}

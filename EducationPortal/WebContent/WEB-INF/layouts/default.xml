@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="base" template="/WEB-INF/template/default.jsp">
+		<put-attribute name="title" value="Education Portal"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"></put-attribute>
+
+		
+	</definition>
+	
+	<definition name="home" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/home.jsp"></put-attribute>
+			
+	</definition>
+		<definition name="login" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/login.jsp"></put-attribute>
+			
+	</definition>
+	
+		<definition name="logout" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/logout.jsp"></put-attribute>
+			
+	</definition>
+	
+	<definition name="review" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/review.jsp"></put-attribute>
+			
+	</definition>
+		<definition name="createreview" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/createreview.jsp"></put-attribute>
+			
+	</definition>
+		<definition name="createaccount" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/createaccount.jsp"></put-attribute>
+			
+	</definition>
+		<definition name="reviews" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/reviews.jsp"></put-attribute>
+			
+	</definition>
+		<definition name="reviewadded" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/reviewadded.jsp"></put-attribute>
+			
+	</definition>
+		<definition name="accountcreated" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/accountcreated.jsp"></put-attribute>
+			
+	</definition>
+	
+	
+	
+</tiles-definitions>

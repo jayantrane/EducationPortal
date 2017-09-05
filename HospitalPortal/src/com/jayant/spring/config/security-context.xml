@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-4.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<security:authentication-manager>
+		<security:authentication-provider>
+			<security:jdbc-user-service data-source-ref="dataSource" />
+		</security:authentication-provider>
+	</security:authentication-manager>
+	<security:http use-expressions="true">
+		<security:form-login login-page="/login"
+			authentication-failure-url="/login?err=true"
+			authentication-success-forward-url="/" />
+		<security:intercept-url access="isAuthenticated()" pattern="/createreport" />
+			<security:intercept-url access="isAuthenticated()" pattern="/increatereport" />
+			<security:intercept-url access="isAuthenticated()" pattern="/reportcreated" />
+			<security:intercept-url access="isAuthenticated()" pattern="/users" />
+			<security:intercept-url access="isAuthenticated()" pattern="/profile" />
+			<security:intercept-url access="isAuthenticated()" pattern="/report" />
+			<security:intercept-url access="hasRole('ROLE_DOCTOR')" pattern="/patients" />
+			<security:intercept-url access="hasRole('ROLE_DOCTOR')" pattern="/reports" />
+			<security:intercept-url access="hasRole('ROLE_DOCTOR')" pattern="/inpatientreport" />
+			<security:intercept-url access="permitAll" pattern="/myreports" />
+			<security:intercept-url access="permitAll" pattern="/logout" />
+			<security:intercept-url access="permitAll" pattern="/home" />
+			<security:intercept-url access="permitAll" pattern="/static/**" />
+			<security:intercept-url access="permitAll" pattern="/" />
+			
+			<security:intercept-url access="permitAll" pattern="/login" />
+			<security:intercept-url access="permitAll" pattern="/checkuser" />
+			<security:intercept-url access="permitAll" pattern="/createuser" />
+			<security:intercept-url access="permitAll" pattern="/increateuser" />
+			<security:intercept-url access="permitAll" pattern="/accountcreated" />
+			<security:intercept-url access="permitAll" pattern="/" />
+			<security:intercept-url access="permitAll" pattern="/" />
+			<security:intercept-url access="denyAll" pattern="/*" />
+			<security:logout invalidate-session="true"
+				logout-success-url="/logout" logout-url="/j_spring_security_logout" />
+	</security:http>
+</beans>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<definition name="base" template="/WEB-INF/templates/base.jsp">
+		<put-attribute name="title" value="Hospital Portal"></put-attribute>
+		<put-attribute name="header" value="/WEB-INF/tiles/header.jsp"></put-attribute>
+		<put-attribute name="footer" value="/WEB-INF/tiles/footer.jsp"></put-attribute>
+	</definition>
+	<definition name="home" extends="base" >
+	<put-attribute name="content" value="/WEB-INF/tiles/home.jsp"></put-attribute>
+	</definition>
+	<definition name="report" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/report.jsp"></put-attribute>
+	</definition>
+	<definition name="users" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/users.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="createuser" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/createuser.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="useradded" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/useradded.jsp"></put-attribute>
+	</definition>
+		<definition name="createreport" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/createreport.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="reportadded" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/reportadded.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="login" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/login.jsp"></put-attribute>
+	</definition>
+	<definition name="patients" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/patients.jsp"></put-attribute>
+	</definition>
+	<definition name="reports" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/reports.jsp"></put-attribute>
+	</definition>
+	<definition name="logout" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/logout.jsp"></put-attribute>
+	</definition>
+	<definition name="checkuser" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/checkuser.jsp"></put-attribute>
+	</definition>
+	<definition name="profile" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/profile.jsp"></put-attribute>
+	</definition>
+	<definition name="myreports" extends="base">
+		<put-attribute name="content" value="/WEB-INF/tiles/myreports.jsp"></put-attribute>
+	</definition>
+</tiles-definitions>

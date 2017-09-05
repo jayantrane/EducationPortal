@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+
+caption{
+	font-size:30px;
+	color: darkviolet;
+	font-weight: bold;
+}
+.formtable{
+	position: relative;
+	 margin-left: auto;
+    margin-right: auto;
+	padding: 10px;
+	margin-top: 40px;
+	border: 2px solid blue;
+	background-color: antiquewhite;
+}
+
+#reports-table{
+	position:relative;
+	 margin-left: auto;
+    margin-right: auto;
+    margin-top : 20px;
+	border: 2px solid blue;
+	align-text:center;
+}
+#reports-table th{
+	font-weight:bold;
+	border: 2px solid blue;
+	font-size: 24px;
+}
+#reports-table td {
+	font-size: 24px;
+	padding:10px;
+	border: 2px solid blue;
+}
+td {
+	font-size: 24px;
+	padding:10px;
+}
+.formtablelogin{
+	background-color: antiquewhite;
+	align-content: center;
+}
+form{
+	
+	
+}
+td {
+	font-size: 24px;
+	padding:10px;
+}
+
+#sbutton{
+	display: block;
+	padding-left: 90%;
+	font-size: 35px;
+}
+
+.foot{
+	clear:both;
+	margin-top: 40px;
+	
+}
